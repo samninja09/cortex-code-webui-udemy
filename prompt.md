@@ -23,6 +23,11 @@ Now we are done with store master, lets do the same for initial-load/customer-ma
 
 Now we are done with customer master, lets do the same for initial-load/sales-master csv file, it has total 2 csv files for sales data, do the same what is done for customer master.
 
+## Silver Layer + Dynamic Tables
+
+Next, we have to move data from bronze layer to silver layer using dynamic table approach as referred in our architectural diagram instruction and we will start with one table at a time. So lets start with region master table. 
+Bronze layer tables may have duplicate records as copy command does not validate it, hence understand the entity domain and check duplicate records, also add column/record level quality check if necessary. Dynamic table shoudl have downstream lag and incremental approach. Do we need stream object in bronze layer or not, please propose an optimal solution to save cost
+
 
 
 
