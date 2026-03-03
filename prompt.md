@@ -32,7 +32,12 @@ Bronze layer tables may have duplicate records as copy command does not validate
 
 ### Dim Table
 
-Now create a country dim table by considering all the 4 silver schem tables region/country/tax/currency and combine them into a single dimension. Also enable the SCD Type2 and the key should be a hash code so it can be referred in fact table for join and don't use any interger based auto-increment value. Also add necessary and brief description for columns as well as for table so when we create semantic layer, it can be helpful
+Now create a country dim table by considering all the 4 silver schem tables region/country/tax/currency and combine them into a single dimension. Also enable the SCD Type2 and the key should be a hash code so it can be referred in fact table for join and don't use any interger based auto-increment value. Also add necessary and brief description for columns as well as for table so when we create semantic layer, it can be helpful.
+
+
+can you fix the lag as downstream and don't define a fixed lag unless otherwise specified.
+
+
 
 
 
