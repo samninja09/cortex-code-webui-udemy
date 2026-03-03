@@ -38,6 +38,8 @@ Now create a country dim table by considering all the 4 silver schem tables regi
 can you fix the lag as downstream and don't define a fixed lag unless otherwise specified.
 
 
+## 
+Now consider the 5 product related tables from silve layer and create product dim table. there is 5th bridge table that is related to country applicable of product, suggest what is the best way create it as separate table or single table, please propose...  use dynamic table with downstream lag, add column level and table level comments.
 
 
 
