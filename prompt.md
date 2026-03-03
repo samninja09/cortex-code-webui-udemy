@@ -48,6 +48,32 @@ Create DIM_CUSTOMER dimension table with SCD Type 2 and hash surrogate key from 
 
 Create FACT_SALES table joining SALES_HEADER/ITEM with DIM_CUSTOMER, DIM_PRODUCT, DIM_STORE, DIM_COUNTRY using hash keys. Before creating the fact table at item level granularity, create the date dim table.
 
+make following corrections...
+1. re-created the date dim as dynamic table and min/max data should come from silve layer sales header table.
+2. the fact sales table should have refernece from gold layer dim table than referring from silve layer.. and all these tables should be dynamic table so we can have full lineage.
+3. 
+
+We have not used the bridge table, is it required to have the bridge table refernece in fact table?
+
+
+Since we have header level data and item level data, can you create 2 different fact tables, one as header fact and other as item fact table and help me if this is right approach or not?
+
+## Aggregated Layer
+
+
+We have not used the bridge table, is it required to have the bridge table refernece in fact table?
+
+
+Since we have header level data and item level data, can you create 2 different fact tables, one as header fact and other as item fact table and help me if this is right approach or not?
+
+
+Now suggest the aggregated fact table that can show daily and weekly or monthly sales for quick summary and aggregated set?
+
+
+since these are refreshed on daily, weekly and monthly basis, can you change the frequency accordingly than having downstream as lag.
+
+
+
 
 
 
