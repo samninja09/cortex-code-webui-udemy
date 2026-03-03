@@ -42,6 +42,13 @@ can you fix the lag as downstream and don't define a fixed lag unless otherwise 
 Now consider the 5 product related tables from silve layer and create product dim table. there is 5th bridge table that is related to country applicable of product, suggest what is the best way create it as separate table or single table, please propose...  use dynamic table with downstream lag, add column level and table level comments.
 
 
+create the store dim table like country dim table and this has only single upstream table in silver layer. Follow all the instruction like above dim tables.
+
+Create DIM_CUSTOMER dimension table with SCD Type 2 and hash surrogate key from CUSTOMER_MASTER silver table.
+
+Create FACT_SALES table joining SALES_HEADER/ITEM with DIM_CUSTOMER, DIM_PRODUCT, DIM_STORE, DIM_COUNTRY using hash keys. Before creating the fact table at item level granularity, create the date dim table.
+
+
 
 
 
